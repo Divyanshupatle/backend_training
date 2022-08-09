@@ -27,6 +27,23 @@ router.get('/movies/:indexNumber',function(req,res){
     }else{
     res.send(movies[index])}
 })
+router.get('/film',function(req,res){
+    let film=[ {
+        id: 1,
+        name:"The Shining"
+       }, {
+        id: 2,
+        name:"Incendies"
+       }, {
+        id: 3,
+        name:"Rang de Basanti"
+       }, {
+        id: 4,
+        name:"Finding Nemo"
+       }]
+      //let index=films.params.indexNumber
+    res.send(film)
+})
 router.get('/films',function(req,res){
     let films=[ {
         id: 1,
@@ -41,9 +58,16 @@ router.get('/films',function(req,res){
         id: 4,
         name:"Finding Nemo"
        }]
-      //let index=films.params.indexNumber
-    res.send(films)
+       let filmId=req.params.films
+    for(let i=0;i<films;i++){
+        let film=films[i]
+        if(film.id==filmId){
+            return res.send(film)
+        }
+    }
+    res.send("worng")
 })
+
 
 
 
