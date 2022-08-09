@@ -27,6 +27,43 @@ router.get("/movies/:indexNumber", function(req, res){
     let requiredMovie = movies[movieIndex]
     res.send(requiredMovie)
 })
+//missing no. problem-1
+router.get("/sol1",function(req,res){
+
+    let number=[1,2,3,4,5,7];
+    let sum=0;
+     for(let i=0;i<number.length;i++){
+      sum=sum+number[i];
+     }
+     
+      
+      let n=number.pop();
+      let sumOfNumber=(n*(n+1))/2;
+      let missingNumber=sumOfNumber-sum;
+     res.send({data:missingNumber});
+ });
+
+ 
+ //missing no. problem-2
+ router.get("/sol2",function(req,res){
+
+  let number=[33, 34, 35, 36, 38];
+  let sum=0;
+  let len=number.length+1;
+     for(let i=0;i<number.length;i++){
+      sum=sum+number[i];
+     }
+
+  let first=number.shift();
+
+  let last=number.pop();
+  
+  let ArraySum=((len)/2)*(first+last);
+  
+    
+  let missingNumber=ArraySum-sum;
+   res.send({data:missingNumber});
+});
 
 router.get("/shoes", function(req, res){
     let queryParams = req.query
@@ -52,6 +89,9 @@ router.get('/candidates/:canidatesName', function(req, res){
     console.log('The request objects is '+ JSON.stringify(req.params))
     console.log('Candidates name is '+req.params.canidatesName)
     res.send('Done')
+})
+router.get("/sol1",function(req,res){
+    
 })
 
 router.get("/films", function(req, res){
