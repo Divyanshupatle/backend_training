@@ -141,7 +141,14 @@ router.get("/films/:filmId", function(req, res){
 
        //if there is no match give an error response
        res.send("The film id doesn't match any movie")
+})  
+
+router.post("/post",function(req,res){
+    console.log(req.body)
+    res.send({user:"kuchhh bhi",})
 })
+
+
 
 module.exports = router;
 // adding this comment for no reason
