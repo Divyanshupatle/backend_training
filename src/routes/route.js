@@ -11,4 +11,10 @@ router.post("/createUser", UserController.createUser  )
 
 router.get("/getUsersData", UserController.getUsersData)
 
+//assignment
+
+router.post("/createbook",UserController.createbook)
+router.get("/getbooks", UserController.getbooks)
+
+
 module.exports = router;
