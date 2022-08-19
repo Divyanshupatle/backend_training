@@ -20,7 +20,27 @@ router.post("/createUser", UserController.createUser  )
 //router.post("/updateBooks", BookController.updateBooks)
 //router.post("/deleteBooks", BookController.deleteBooks)
 
+
+
+
+
+
 router.post("/createAuthor", BookController1.createAuthor)
+
+router.post("/book1", BookController1.book1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //MOMENT JS
 const moment = require('moment');
