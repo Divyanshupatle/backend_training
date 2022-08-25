@@ -64,11 +64,11 @@ const totalSalesPerAuthor = async function (req, res) {
 
 
 
-// CRUD OPERATIONS:
-// CREATE
-// READ
-// UPDATE
-// DELETE
+// // // CRUD OPERATIONS:
+// // // CREATE
+// // // READ
+// // // UPDATE
+// // // DELETE
 
 
 
@@ -77,3 +77,25 @@ module.exports.getBooksData = getBooksData
 module.exports.updateBooks = updateBooks
 module.exports.deleteBooks = deleteBooks
 module.exports.totalSalesPerAuthor = totalSalesPerAuthor
+
+// let arr=[1,2,3,4,5]
+
+// function reversearr(arr){
+//     let a=[]
+//     for(let i=arr.length-1;i>=0;i--){
+//         a.push(arr[i])
+//     }
+//     console.log(a)
+// }
+
+// reversearr()
+// let x= [4]
+// function maps(x){
+//     x.map(function(value){
+//       let a=[]
+//       a.push(value*2)
+      
+//        console.log(a)
+//     })
+  
+//   }
