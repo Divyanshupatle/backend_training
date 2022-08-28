@@ -11,9 +11,10 @@ const newuserSchema = new mongoose.Schema( {
         type: String,
         enum: ["male", "female", "other"]
     }, // Allowed values are - “male”, “female”, “other”
-	isFreeAppUser:{
-        type:Boolean,
-        default:false
+    isFreeAppUser:{
+        type:String,
+        default:"false"
     }
+	
 });
 module.exports = mongoose.model('Newuser', newuserSchema) //users

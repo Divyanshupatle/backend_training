@@ -16,9 +16,10 @@ router.get("/test-me", function (req, res) {
 
 
 
-router.post("/userdoc", userdocController.userdoc  )
+router.post("/userdoc",commonnewMW.newmid, userdocController.userdoc  )
 router.post("/createproduct", productdocController.createproduct)
-router.post("/createorder",commonnewMW.newmid2, orderdocController.createorder)
+router.post("/createorder",commonnewMW.newmid,orderdocController.createorder)
+router.post("/createorder2",orderdocController.createorder2)
 
 // router.get("/getUsersData", UserController.getUsersData)
 

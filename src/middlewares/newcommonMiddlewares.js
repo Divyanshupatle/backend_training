@@ -4,34 +4,28 @@ const userdocumentModel = require("../models/userdocumentModel")
 const newuserModel = require("../models/userdocumentModel")
 
 const newmid= function(req,res,next){
-    let a= req.body.isFreeAppUser
+    let a= req.headers["isfreeappuser"]
     if(!a){
         return res.send({status:false,msg:"the request is missing a mandatory header"})
     }else{
         next()
-    }
-}
-
-const newmid2= async function(req,res,next){
-    let order= req.body
-    if(!order){
-        return res.send({msg:"this is requred"})
-    }else{
-       return res.send({data:creatuser,msg:"true"}) 
     }}
-
-    const newmid3= async function(req,res,next){
-        let order= req.headers.isFreeAppUser
-        let creatuser= await newuserModel.findById(order.userId)
-        if(!creatuser){
+    const newmid2= async function(req,res,next){
+        let userid= req.body.userId
+        let productc= req.body.productId
+        let creatuser= await newuserModel.findById({_id:userid})
+        let product= await productdocumentModel.findById({_id:productc})
+        if(!creatuser && !product){
             return res.send({msg:"this is requred"})
-        }else{
-            res.send({data:creatuser,msg:"true"}) 
-        }  
-    
+        }
+        else{
+             next() 
+        }}
 
- 
-}
+    const newmid3= function(req,res,next){
+        
+    }
 
 module.exports.newmid=newmid
 module.exports.newmid2=newmid2
+module.exports.newmid3=newmid3
