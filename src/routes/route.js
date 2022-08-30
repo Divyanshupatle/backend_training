@@ -1,10 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const userController= require("../controllers/userController")
+const user1Controller= require("../controllers/user1Controller")
 
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
+
+router.post("/registerUser",user1Controller.creatUser1)
+
+
+
+
+
+
+
+
+
 
 router.post("/users", userController.createUser)
 
