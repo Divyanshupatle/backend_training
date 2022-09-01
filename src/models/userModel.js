@@ -18,4 +18,20 @@ const userSchema = new mongoose.Schema( {
     isDeleted : { type: Boolean, default: false}
 }, { timestamps: true });
 
-module.exports = mongoose.model('mw2User', userSchema)
+module.exports = mongoose.model('User', userSchema)
+
+//   1. ----------------------Your user document should look like this--------------------
+//  	{
+//     "_id" : ObjectId("6226e3d2b98f22b349ca58be"),
+//     "firstName" : "Sabiha",
+//     "lastName" : "Khan",
+//     "mobile" : "9898909087",
+//     "emailId" : "sk@gmail.com",
+//     "password" : "password123",
+//     "gender" : "female",
+// 	"isDeleted": false, //default value is false 
+//     "age" : 12,
+//     "createdAt" : ISODate("2022-03-08T05:04:18.737Z"),
+//     "updatedAt" : ISODate("2022-03-08T05:04:18.737Z"),
+//     "__v" : 0
+// }
